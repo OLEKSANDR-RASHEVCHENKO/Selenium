@@ -19,7 +19,7 @@ public class AllertAuto {
         driver.manage().window().maximize();
         driver.findElement(By.xpath("//*[text()='Click for JS Confirm']")).click();
         //Alert alertWindow= (Alert) driver.switchTo().alert();
-        Alert alertWindow = (Alert) myWait.until(ExpectedConditions.alertIsPresent());
+        Alert alertWindow =myWait.until(ExpectedConditions.alertIsPresent());
         System.out.println(alertWindow.getText());
         //alertWindow.accept();
         alertWindow.dismiss();//cansel button
